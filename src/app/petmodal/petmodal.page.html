@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>petmodal</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="pet">
+    <ion-item>
+      <ion-label position="stacked">Title</ion-label>
+      <ion-input [(ngModel)]="pet.title"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="stacked">Text</ion-label>
+      <ion-textarea [(ngModel)]="pet.text" rows="8"></ion-textarea>
+    </ion-item>
+  </div>
+  
+  <ion-button (click)="updateNote()" expand="block" color="success" shape="round">
+   <ion-icon slot="start" name="save"></ion-icon>
+   Update
+  </ion-button>
+  <ion-button (click)="deleteNote()" expand="block" color="danger" shape="round">
+    <ion-icon slot="start" name="trash"></ion-icon>
+    Delete
+   </ion-button>
+  </ion-content>

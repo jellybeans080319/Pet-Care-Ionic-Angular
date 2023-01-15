@@ -1,0 +1,30 @@
+.menu-header{
+  display: flex;
+  align-items: center;
+  background-color: var(--ion-color-primary);
+  color: #fff;
+  padding: 5px;
+  font-family: Montserrat;
+}
+.menu-header p{
+  margin-left: 7px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-family: Product sans;
+}
+.user-image{
+  width: 50px;
+  height: 50px;
+}
+ion-item {
+  margin-top: 10px;
+  border-radius: 20px;
+ // height: 65px;
+  box-shadow: 1px 0.5px 1px 1px #4E0D81;
+  
+  ion-label{
+      font-family: Product sans;
+  }
+}

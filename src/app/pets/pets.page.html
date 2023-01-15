@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Pets</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="top">
+    <div class="subtitle">
+      <div class="line"></div>
+      <p class="title"><ion-icon name="paw">  </ion-icon> My Pets</p>
+      <div class="line"></div>
+
+      <ion-item *ngFor="let pet of pets" (click)="openNote(pet)">
+        <ion-label>
+          {{ pet.title }}
+        </ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Name</ion-label>
+        <ion-input value="Pampulutan"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Name</ion-label>
+        <ion-input value="Pampulutan"></ion-input>
+      </ion-item>
+      </div>
+
+      <!-- adding pet -->
+  <ion-fab vertical="center" horizontal="end" slot="fixed">
+    <ion-fab-button >
+      <ion-icon name="add" (click)="addNote()"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  </div>
+</ion-content>

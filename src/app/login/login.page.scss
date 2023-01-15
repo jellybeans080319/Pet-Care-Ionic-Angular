@@ -1,0 +1,70 @@
+ion-content{
+    height:100%;
+    --background: #F4F4FA;
+     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    
+//     .error-container {
+//         .error-message {
+//             margin: 16px 0px;
+//             display: flex;
+//             align-items: center;
+//             color: var(--ion-color-danger);
+//             font-size: 14px;
+//             ion-icon {
+//             font-size: 16px;
+//             padding-inline-end: 8px;
+//         }
+//     }
+// }
+h1{
+    font-size: 30 px;
+    font-family: Montserrat;
+    color: #4E0D81;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+img{
+    width: 140px;
+    height: 140px;
+    margin-top: 50px;
+}
+#form{
+    margin-top: 8%;
+    padding-right: 30px;
+    padding-left: 30px;
+    align-items: center;
+    
+    .ion-margin-bottom {
+        border-radius: 50px;
+        height: 50px;
+        box-shadow: 1px 0.5px 1px 1px #4E0D81;
+        
+        //letters sa loob ng textbox
+        ion-input{
+            font-size: 20 px;
+            --padding-top: 20px;
+            --padding-bottom: 15px;
+            --padding-start: 5px;
+            font-family: Product sans;
+        }
+    }
+    ion-button{
+        margin-top: 35px;
+        height: 50px;
+        font-size: 18px;
+        font-family: Montserrat;
+        text-transform: initial;
+        border-radius: 50px;
+    }
+    .bottom p{
+        margin: 0;
+    }
+    .bottom ion-button{
+        font-size: 18px; 
+        font-family: Product Sans;
+    }
+}
+}

@@ -1,0 +1,31 @@
+// ion-menu-button {
+//   color: var(--ion-color-primary);
+// }
+ion-title{
+  font-family: Montserrat;
+}
+ion-content{
+  size:100%;
+  --background: #F4F4FA;
+}
+.welcome{
+  margin: 50px;
+  padding: 20px 20px 20px 20px ;
+  //border-radius: 20px;
+}
+.welcome p{
+  font-size: 18px;
+  color: #4E0D81;
+  font-family: Montserrat;
+//font-weight: bold;
+  text-align: center;
+  margin-top:5 px;
+}
+p{
+  font-size: 18px;
+  color: #4E0D81;
+  font-family: Montserrat;
+//font-weight: bold;
+  text-align: center;
+  margin-top:5 px;
+}
