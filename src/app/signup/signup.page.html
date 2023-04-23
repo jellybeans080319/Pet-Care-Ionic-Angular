@@ -1,0 +1,48 @@
+<ion-content>
+  <div id="header">
+    <img src="assets/image5.png"/>
+    <h1>Create Account</h1>
+  </div>
+
+  <form id="form" [formGroup]="signUpForm" (ngSubmit)="signUpWithEmail()">
+
+    <ion-item class="ion-margin-bottom">
+      <ion-input type="text" formControlName="name" placeholder="Name"></ion-input>
+      <ion-icon name="person" slot="start"></ion-icon>
+      </ion-item>
+      
+      <ion-item class="ion-margin-bottom">
+        <ion-input type="text" formControlName="age" placeholder="Age"></ion-input>
+        <ion-icon name="mail" slot="start"></ion-icon>
+      </ion-item>
+
+      <ion-item class="ion-margin-bottom">
+        <ion-select placeholder="Select Gender" formControlName="gender">
+          <ion-select-option value="male">Male</ion-select-option> 
+          <ion-select-option value="female">Female</ion-select-option>
+          <ion-select-option value="others">Others</ion-select-option>
+          </ion-select>   
+        <ion-icon name="male-female" slot="start"></ion-icon>
+        </ion-item>
+        
+    <ion-item class="ion-margin-bottom">
+      <ion-input type="text" formControlName="email" placeholder="Enter Email Address"></ion-input>
+      <ion-icon name="mail" slot="start"></ion-icon>
+    </ion-item>
+
+    <ion-item class="ion-margin-bottom">
+      <ion-input type="password" formControlName="password" placeholder="Enter Password"></ion-input>
+      <ion-icon name="lock-closed" slot="start"></ion-icon>
+    </ion-item>
+    
+    <ion-button type="submit" expand="block" shape="round" [disabled]="!signUpForm.valid">SIGN UP</ion-button>
+
+    
+
+    <div class="bottom">
+      <p><ion-button disabled fill="clear">Already have an account?</ion-button>
+        <ion-button routerLink="/login" fill="clear">LOGIN
+        </ion-button></p>
+    </div>
+  </form>
+</ion-content>

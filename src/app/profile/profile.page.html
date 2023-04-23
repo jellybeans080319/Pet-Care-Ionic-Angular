@@ -1,0 +1,65 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="top">
+    <div class="preview">
+      <ion-avatar (click)="changeImage()">
+        <ion-icon name="lock-closed" slot="start"></ion-icon>
+        <img *ngIf="profile.imageUrl; else placeholder_avatar;" [src]="profile.imageUrl" />
+        <ng-template #placeholder_avatar>
+          <div class="fallback">
+            <p>Select avatar</p>
+          </div>
+        </ng-template>
+      </ion-avatar>
+    </div>
+  <div class="subtitle">
+    <div class="line"></div>
+    <p class="title">Personal Account Information</p>
+    <div class="line"></div>
+
+<div >
+    <ion-item>
+      <ion-label position="floating">Name: </ion-label>
+      <ion-input [(ngModel)]="name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Age: </ion-label>
+      <ion-input [(ngModel)]="age"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-select placeholder="Select Gender" [(ngModel)]="sex">
+        <ion-select-option value="male">Male</ion-select-option> 
+        <ion-select-option value="female">Female</ion-select-option>
+        <ion-select-option value="others">Others</ion-select-option>
+      </ion-select>  
+    </ion-item>
+  </div>
+  <ion-button (click)="update()" expand="block" shape="round" >SAVE CHANGES</ion-button>
+</div>
+  <div class="subtitle">
+    <div class="line"></div>
+    <p class="title">Account Information</p>
+    <div class="line"></div>
+    <ion-item>
+      <ion-label position="floating">Username</ion-label>
+      <ion-input disabled="true" [(ngModel)]="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input disabled="true" value="ampol123" type="password"></ion-input>
+    </ion-item>
+  </div>
+  
+  </div>
+
+</ion-content>

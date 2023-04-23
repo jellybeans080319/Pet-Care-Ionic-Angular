@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title><ion-icon name="paw"></ion-icon>     Notes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="top">
+    <div class="line"></div>
+    <h3><ion-icon name="heart"></ion-icon> List of My Notes</h3>
+    <div class="line"></div>
+    
+    <ion-item *ngFor="let note of notes" (click)="openNote(note)">
+      <ion-label>
+        {{ note.title }}
+      </ion-label>
+    </ion-item>
+
+    <!-- <ion-item *ngFor="let user of users" (click)="openNote(user)">
+      <ion-label>
+        {{ user.name }}
+      </ion-label>
+    </ion-item> -->
+
+
+  <!-- adding note -->
+  <ion-fab vertical="end" horizontal="center" slot="fixed">
+    <ion-fab-button (click)="addNote()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</div>
+  
+</ion-content>

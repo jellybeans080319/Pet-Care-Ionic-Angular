@@ -1,0 +1,16 @@
+errors encountered:
+when running ionic build
+1. Property 'firebase' does not exist on type { production: boolean; }
+solution:
+	When you run ng build --prod angular-cli will use the environment.prod.ts file and your environment.prod.ts files environment variable doesn't have the firebase field hence you are getting the exception.
+
+Add the field to environment.prod.ts
+
+2. Dependency conflicts
+solution:
+	sadlyyy I don't know how to handle this error hahaha
+
+3. can't run ionic capacitor add android because of dependencies
+alternative solution
+	npm install @capacitor/android --force
+	npx capacitor add android

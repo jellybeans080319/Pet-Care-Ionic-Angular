@@ -1,0 +1,65 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <h1>Welcome!</h1>
+    <ion-input disabled="true" [(ngModel)]="name"></ion-input>
+  
+  <div class="top">
+  <div class="welcome">
+    <p><ion-icon name="paw"></ion-icon>   Helping you to take good care of your Pets</p>
+    <div class="divider"></div>
+  </div>
+
+  <div class="slides ion-margin-bottom">
+    <ion-slides>
+      <ion-slide>
+        <ion-card routerLink="/cats" >
+          <img src="assets/cats/cat.jpg">
+          <ion-card-header>
+            <ion-card-subtitle>Know more about your</ion-card-subtitle>
+            <ion-card-title>Cats</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-slide>
+
+      <ion-slide>
+        <ion-card routerLink="/dogs" >
+          <img src="assets/dogs/dog.jpg">
+          <ion-card-header>
+            <ion-card-subtitle>Know more about your</ion-card-subtitle>
+            <ion-card-title>Dogs</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-slide>
+
+      <ion-slide>
+        <ion-card routerLink="/bird" >
+          <img src="assets/bird/bird.jpg">
+          <ion-card-header>
+            <ion-card-subtitle>Know more about your pet</ion-card-subtitle>
+            <ion-card-title>Bird</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-slide>
+
+      <ion-slide>
+        <ion-card routerLink="/horse" >
+          <img src="assets/horse/horse.jpg">
+          <ion-card-header>
+            <ion-card-subtitle>Know more about you pet</ion-card-subtitle>
+            <ion-card-title>Horse</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-slide>
+
+      </ion-slides>
+      </div>
+  </div>
+</ion-content>

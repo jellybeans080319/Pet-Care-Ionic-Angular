@@ -1,0 +1,43 @@
+<ion-content class="sign-in-content">
+  <div id="header">
+    <img src="assets/image5.png"/>
+    <h1>Welcome!</h1>
+  </div>
+
+  <form id="form" [formGroup]="signInForm" (ngSubmit)="signInWithEmail()">
+    
+    <ion-item class="ion-margin-bottom">
+      <ion-input type="text"  formControlName="email"  placeholder="Enter Email Address"></ion-input>
+      <ion-icon name="mail" slot="start"></ion-icon>
+    </ion-item>
+    
+    <div class="error-container">
+      <ng-container *ngFor="let validation of validation_messages.email">
+        <div class="error-message" *ngIf="signInForm.get('email')?.hasError(validation.type) && (signInForm.get('email')?.dirty || signInForm.get('email')?.touched)">
+          <ion-icon name="information-circle-outline"></ion-icon>
+          <span>{{ validation.message }}</span>
+        </div>
+      </ng-container>
+    </div>    
+
+    <ion-item class="ion-margin-bottom">
+      <ion-input type="password" formControlName="password" placeholder="Enter Password"></ion-input>
+      <ion-icon name="lock-closed" slot="start"></ion-icon>
+    </ion-item>
+    <div class="error-container">
+      <ng-container *ngFor="let validation of validation_messages.password">
+        <div class="error-message" *ngIf="signInForm.get('password')?.hasError(validation.type) && (signInForm.get('password')?.dirty || signInForm.get('password')?.touched)">
+          <ion-icon name="information-circle-outline"></ion-icon>
+          <span>{{ validation.message }}</span>
+        </div>
+      </ng-container>
+    </div>
+
+    <ion-button type="submit" expand="block" shape="round"  [disabled]="!signInForm.valid">LOGIN</ion-button>
+    <div class="bottom">
+      <p><ion-button disabled fill="clear">Don't have an account?</ion-button>
+      <ion-button routerLink="/signup" fill="clear">SIGN UP
+      </ion-button></p>
+    </div>
+  </form>
+</ion-content>
